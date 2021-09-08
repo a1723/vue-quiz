@@ -4,7 +4,7 @@
       <input type="radio" id="one" value="Один" v-model="picked">
       <label for="one">Один</label>
       <br>
-      <input type="radio" id="two" value="Два" v-model="picked">
+      <input type="radio" id="two" value="Двааа" v-model="picked">
       <label for="two">Двааа</label>
       <p>Выбрано: {{ picked }}</p>
       <router-link to="/questionsResults"><button @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button></router-link>

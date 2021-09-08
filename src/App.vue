@@ -23,7 +23,6 @@ export default {
     fourthQuestion,
     fifthQuestion,
     questionsResults,
-    
   }
 }
 </script>

@@ -23,8 +23,7 @@
 
 export default {
   name: 'firstQuestion',
-  props: {
-  },
+  props: {},
   data() {
     return {
       title: 'firstQuestion',
