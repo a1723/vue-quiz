@@ -1,20 +1,9 @@
 <template>
-  <div class="firstQuestion">
-     <h1>{{ title }}</h1>
-      <input type="radio" id="one" value="Один" v-model="picked">
-      <label for="one">Один</label>
-      <br>
-      <input type="radio" id="two" value="Два" v-model="picked">
-      <label for="two">Два</label>
-      <br>
-      <input type="radio" id="three" value="Три" v-model="picked">
-      <label for="three">Три</label>
-      <br>
-      <input type="radio" id="four" value="Четыре" v-model="picked">
-      <label for="four">Четыре</label>
-      <br>
-      <p>Выбрано: {{ picked }}</p>
-      <router-link to="/2"><button @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button></router-link>
+  <div class="questionsResults">
+      {{ questionsResults }}
+      {{ this.answers }}
+      <br><br><br>
+      <router-link to="/"><button @click="clearLocalStorage">Пройти тест ещё раз</button></router-link>
   </div>
 </template>
 
@@ -22,12 +11,12 @@
 
 
 export default {
-  name: 'firstQuestion',
+  name: 'questionsResults',
   props: {
   },
   data() {
     return {
-      title: 'firstQuestion',
+      title: 'questionsResults',
       picked: '',
       answers: [],
     }
@@ -54,7 +43,11 @@ export default {
       const parsed = JSON.stringify(this.answers);
       console.log(parsed);
       localStorage.setItem('answers', parsed);
-    }
+    },
+    clearLocalStorage() {
+      localStorage.setItem('answers', '');
+      console.log(this.answers);
+    },
   }
 }
 

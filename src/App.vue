@@ -1,18 +1,29 @@
 <template>
   <div id="app">
-  <p>Hello Vue!</p>
-  <firstQuestion></firstQuestion>
+  <p><strong>QUIZ</strong></p>
+  <router-view></router-view>
   </div>
 </template>
 
 <script>
 
 import firstQuestion from './components/firstQuestion'
+import secondQuestion from './components/secondQuestion'
+import thirdQuestion from './components/thirdQuestion'
+import fourthQuestion from './components/fourthQuestion'
+import fifthQuestion from './components/fifthQuestion'
+import questionsResults from './components/questionsResults'
 
 export default {
   name: 'App',
   components: {
-    firstQuestion
+    firstQuestion,
+    secondQuestion,
+    thirdQuestion,
+    fourthQuestion,
+    fifthQuestion,
+    questionsResults,
+    
   }
 }
 </script>
@@ -26,4 +37,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+p {
+    font-size: 25px;
+  }
 </style>
