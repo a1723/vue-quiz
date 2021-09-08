@@ -1,6 +1,7 @@
 <template>
   <div class="firstQuestion">
      <h1>{{ title }}</h1>
+     <b-form-group v-model="picked" :state="state" name="radio-validation">
       <input type="radio" id="one" value="Один" v-model="picked">
       <label for="one">Один</label>
       <br>
@@ -13,8 +14,11 @@
       <input type="radio" id="four" value="Четыре" v-model="picked">
       <label for="four">Четыре</label>
       <br>
+      <b-form-invalid-feedback :state="state">Please select one</b-form-invalid-feedback>
       <p>Выбрано: {{ picked }}</p>
-      <router-link to="/2"><button @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button></router-link>
+      <router-link to="/2"><button :disabled='isDisabled' @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button></router-link>
+
+      </b-form-group>
   </div>
 </template>
 
@@ -29,6 +33,7 @@ export default {
       title: 'firstQuestion',
       picked: '',
       answers: [],
+      value: null,
     }
   },
   mounted() {
@@ -54,7 +59,15 @@ export default {
       console.log(parsed);
       localStorage.setItem('answers', parsed);
     }
-  }
+  },
+  computed: {
+      state() {
+        return Boolean(this.picked);
+      },
+      isDisabled() {
+        return !this.picked;
+      }
+    }
 }
 
 </script>

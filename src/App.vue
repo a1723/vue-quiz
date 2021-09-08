@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <p><strong>QUIZ</strong></p>
+  <h1><strong>QUIZ</strong></h1>
   <router-view></router-view>
   </div>
 </template>
@@ -13,6 +13,8 @@ import thirdQuestion from './components/thirdQuestion'
 import fourthQuestion from './components/fourthQuestion'
 import fifthQuestion from './components/fifthQuestion'
 import questionsResults from './components/questionsResults'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   name: 'App',
@@ -34,7 +36,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 p {
     font-size: 25px;
