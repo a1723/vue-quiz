@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-  <h1><strong>QUIZ</strong></h1>
   <router-view></router-view>
   </div>
 </template>
@@ -36,7 +35,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 30px;
+  margin-top: 3px;
 }
 p {
     font-size: 25px;
