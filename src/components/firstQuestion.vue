@@ -1,30 +1,22 @@
 <template>
   <body>
+
+      <!--HEADER-->
+
       <header class="p-3 bg-dark text-white">
-        <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-              <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-            </a>
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">To the begining of the quiz</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">Results</a></li>
+              <li><a href="#" class="nav-link px-2 text-white">About quiz</a></li>
             </ul>
-
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-              <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-            </form>
 
             <div class="text-end">
               <button class="btn btn-outline-light me-2 btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
               <button type="button" class="btn btn-warning">Sign-up</button>
             </div>
           </div>
-        </div>
 
 
     <!--MODAL-->
@@ -63,6 +55,7 @@
   </div>
 
       <!--MODAL-->
+      <!--HEADER-->
 
       </header>
 
@@ -109,55 +102,7 @@
               </div>
               <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
             </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Mon</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Wed</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Tues</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Mon</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Wed</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Tues</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Mon</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
+
           </div>
         </div>
       <div class="b-example-divider"></div>
@@ -165,7 +110,7 @@
 
       <div class="firstQuestion container">
         <h1>{{ title }}</h1>
-        <b-form-group v-model="picked" :state="state" name="radio-validation" >
+        <b-form-group v-model="picked" :state="state" name="radio-validation">
           <b-form-radio v-model="picked" value="Один">Один</b-form-radio>
           <input type="radio" id="two" value="Два" v-model="picked">
           <label for="two">Два</label>
@@ -183,6 +128,12 @@
       </div>
 
     </main>
+
+    <footer class="footer mt-auto py-3 bg-light ml-12">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.Place sticky footer content here.Place sticky footer content here.Place sticky footer content here.Place sticky footer content here.Place sticky footer content here.</span>
+      </div>
+    </footer>
   </body>
 </template>
 
