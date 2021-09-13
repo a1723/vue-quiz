@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-  <router-view></router-view>
+  <Header />
+  <router-view />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import thirdQuestion from './components/thirdQuestion'
 import fourthQuestion from './components/fourthQuestion'
 import fifthQuestion from './components/fifthQuestion'
 import questionsResults from './components/questionsResults'
+import Header from './components/Header.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -24,7 +26,8 @@ export default {
     fourthQuestion,
     fifthQuestion,
     questionsResults,
-  }
+    Header,
+  },
 }
 </script>
 
