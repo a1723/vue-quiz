@@ -8,7 +8,7 @@
       <label for="two">Два</label>
       <br>
       <input type="radio" id="three" value="Три" v-model="picked">
-      <label for="three">Три</label>
+      <label for="three">Трииии</label>
       <br>
       <p>Выбрано: {{ picked }}</p>
       <router-link to="/4"><button @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button></router-link>

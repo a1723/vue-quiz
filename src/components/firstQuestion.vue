@@ -1,117 +1,14 @@
 <template>
   <body>
-
-      <!--HEADER-->
-
-      <header class="p-3 bg-dark text-white">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-              <li><a href="#" class="nav-link px-2 text-white">To the begining of the quiz</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">Results</a></li>
-              <li><a href="#" class="nav-link px-2 text-white">About quiz</a></li>
-            </ul>
-
-            <div class="text-end">
-              <button class="btn btn-outline-light me-2 btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
-              <button type="button" class="btn btn-warning">Sign-up</button>
-            </div>
-          </div>
-
-
-    <!--MODAL-->
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-bs-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button class="btn-close" data-bs-dismiss="modal" aria-bs-label="close"></button>
-              </div>
-              <div class="modal-body">
-                  <form>
-                      <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                      </div>
-                      <div class="mb-3">
-                          <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
-                      </div>
-                      <div class="mb-3 form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
-              </div>
-              <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-          </div>
-      </div>
-  </div>
-
-      <!--MODAL-->
-      <!--HEADER-->
-
-      </header>
-
+  
     <main>
-      <div class="b-example-divider"></div>
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;">
-          <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-            <span class="fs-5 fw-semibold">List group</span>
-          </a>
-          <div class="list-group list-group-flush border-bottom scrollarea">
-            <a href="#" class="list-group-item list-group-item-action active py-3 lh-tight" aria-current="true">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small>Wed</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Tues</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Mon</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Wed</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
-              <div class="d-flex w-100 align-items-center justify-content-between">
-                <strong class="mb-1">List group item heading</strong>
-                <small class="text-muted">Tues</small>
-              </div>
-              <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
-            </a>
-
-          </div>
-        </div>
-      <div class="b-example-divider"></div>
-
-
+      <questionPanel /> <!-- Надо бы вынести этот элемент в основную часть, чтобы не вставлять в каждом вопросе -->
       <div class="firstQuestion container">
         <h1>{{ title }}</h1>
         <b-form-group v-model="picked" :state="state" name="radio-validation">
-          <b-form-radio v-model="picked" value="Один">Один</b-form-radio>
+          <input type="radio" id="one" value="Один" v-model="picked">
+          <label for="two">Один</label>
+          <br>
           <input type="radio" id="two" value="Два" v-model="picked">
           <label for="two">Два</label>
           <br>
@@ -121,8 +18,9 @@
           <input type="radio" id="four" value="Четыре" v-model="picked">
           <label for="four">Четыре</label>
           <br>
-          <b-form-invalid-feedback :state="state">Please select one</b-form-invalid-feedback>
+          <b-form-invalid-feedback :state="state"></b-form-invalid-feedback>
           <div class="mt-2">Выбрано: <strong>{{ picked }}</strong></div>
+          <br>
           <router-link to="/2"><button :disabled='isDisabled' @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button></router-link>
           </b-form-group>
       </div>
@@ -138,8 +36,14 @@
 </template>
 
 <script>
+
+import questionPanel from './questionPanel.vue'
+
 export default {
   name: 'firstQuestion',
+  components: {
+    questionPanel
+  },
   props: {},
   data() {
     return {
@@ -210,6 +114,7 @@ html {
 
 main {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
   height: 100vh;
   height: -webkit-fill-available;
