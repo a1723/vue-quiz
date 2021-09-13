@@ -10,15 +10,9 @@
 </template>
 
 <script>
-
 import firstQuestion from './components/firstQuestion'
-import secondQuestion from './components/secondQuestion'
-import thirdQuestion from './components/thirdQuestion'
-import fourthQuestion from './components/fourthQuestion'
-import fifthQuestion from './components/fifthQuestion'
-import questionsResults from './components/questionsResults'
-import mainHeader from './components/mainHeader'
 import questionPanel from './components/questionPanel'
+import mainHeader from './components/mainHeader'
 import mainFooter from './components/mainFooter'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
@@ -27,13 +21,8 @@ export default {
   name: 'App',
   components: {
     firstQuestion,
-    secondQuestion,
-    thirdQuestion,
-    fourthQuestion,
-    fifthQuestion,
-    questionsResults,
-    mainHeader,
     questionPanel,
+    mainHeader,
     mainFooter,
   },
 }
