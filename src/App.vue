@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-  <Header />
-  <router-view />
+  <mainHeader />
+    <div class="flexing">
+      <questionPanel />
+      <router-view />
+    </div>
+  <mainFooter />
   </div>
 </template>
 
@@ -13,7 +17,9 @@ import thirdQuestion from './components/thirdQuestion'
 import fourthQuestion from './components/fourthQuestion'
 import fifthQuestion from './components/fifthQuestion'
 import questionsResults from './components/questionsResults'
-import Header from './components/Header.vue'
+import mainHeader from './components/mainHeader'
+import questionPanel from './components/questionPanel'
+import mainFooter from './components/mainFooter'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -26,7 +32,9 @@ export default {
     fourthQuestion,
     fifthQuestion,
     questionsResults,
-    Header,
+    mainHeader,
+    questionPanel,
+    mainFooter,
   },
 }
 </script>
@@ -38,9 +46,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 3px;
+  margin-top: 0px;
 }
 p {
     font-size: 25px;
   }
+.flexing {
+  display: flex;
+  flex-direction: row;
+}
+
 </style>
