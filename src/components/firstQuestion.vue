@@ -19,7 +19,10 @@
           <b-form-invalid-feedback :state="state"></b-form-invalid-feedback>
           <div class="mt-2">Выбрано: <strong>{{ picked }}</strong></div>
           <br>
-          <router-link to="/2"><button :disabled='isDisabled' @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button></router-link>
+          <router-link to="/2">
+            <button v-if="!picked" :disabled='isDisabled' @click="nextQuestion" >Принять ответ и перейти к следующему вопросу</button>
+            <button v-else-if="picked" type="button" class="btn btn-success" @click="nextQuestion">Принять ответ и перейти к следующему вопросу</button>
+          </router-link>
         </b-form-group>
       </div>
     </main>
