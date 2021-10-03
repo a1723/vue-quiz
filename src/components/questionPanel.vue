@@ -53,13 +53,10 @@
 
 <script>
 
-import firstQuestion from './firstQuestion.vue'
 
 export default {
     name: 'questionPanel',
-    components: {
-      firstQuestion
-    },
+    components: {},
     props: ['title'],
     data() {
         return {
