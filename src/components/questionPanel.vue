@@ -57,7 +57,7 @@ export default {
     name: 'questionPanel',
     data() {
         return {
-            questionPanel: 'questionPanel'
+
         }
     }
 }
