@@ -1,43 +1,21 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import firstQuestion from '@/components/firstQuestion'
-import secondQuestion from '@/components/secondQuestion'
-import thirdQuestion from '@/components/thirdQuestion'
-import fourthQuestion from '@/components/fourthQuestion'
-import fifthQuestion from '@/components/fifthQuestion'
-import questionsResults from '@/components/questionsResults'
 import BootstrapVue from 'bootstrap-vue'
 
-Vue.use(Router)
-Vue.use(BootstrapVue)
+import questions from '@/components/questions'
+import questionsResults from '@/components/questionsResults'
+
+
+Vue.use(Router);
+Vue.use(BootstrapVue);
 
 export default new Router({
   mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'firstQuestion',
-      component: firstQuestion
-    },
-    {
-      path: '/2',
-      name: 'secondQuestion',
-      component: secondQuestion
-    },
-    {
-      path: '/3',
-      name: 'thirdQuestion',
-      component: thirdQuestion
-    },
-    {
-      path: '/4',
-      name: 'fourthQuestion',
-      component: fourthQuestion
-    },
-    {
-      path: '/5',
-      name: 'fifthQuestion',
-      component: fifthQuestion
+      name: 'questions',
+      component: questions
     },
     {
       path: '/questionsResults',

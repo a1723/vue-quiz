@@ -3,24 +3,24 @@
   <mainHeader />
     <div class="flexing">
       <questionPanel />
-      <router-view />
+
+      <router-view></router-view>
     </div>
   <mainFooter />
   </div>
 </template>
 
 <script>
-import firstQuestion from './components/firstQuestion'
+import questions from './components/questions'
 import questionPanel from './components/questionPanel'
 import mainHeader from './components/mainHeader'
 import mainFooter from './components/mainFooter'
 import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
   name: 'App',
   components: {
-    firstQuestion,
+    questions,
     questionPanel,
     mainHeader,
     mainFooter,

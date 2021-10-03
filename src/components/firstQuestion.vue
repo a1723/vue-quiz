@@ -1,8 +1,8 @@
 <template>
   <body>
     <main>
-      <div class="firstQuestion pt-2 container col-md-12">
-        <h1>{{ title }}</h1>
+      <div>
+        <h1>Текст первого вопроса</h1>
         <b-form-group v-model="picked" :state="state" name="radio-validation">
           <input type="radio" id="one" value="Один" v-model="picked">
           <label for="two">Один</label>
@@ -37,10 +37,8 @@ export default {
   props: {},
   data() {
     return {
-      title: 'Текст первого вопроса',
       picked: '',
       answers: [],
-      value: null,
     }
   },
   mounted() {
@@ -79,7 +77,6 @@ export default {
 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 </style>

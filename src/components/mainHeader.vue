@@ -10,10 +10,10 @@
               <li><a href="#" class="nav-link px-3 text-white">About quiz</a></li>
             </ul>
 
-            <div class="text-end">
+            <!-- <div class="text-end">
               <button class="btn btn-outline-light me-3 btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
               <button type="button" class="btn btn-warning">Sign-up</button>
-            </div>
+            </div> -->
           </div>
 
 

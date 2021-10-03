@@ -63,7 +63,7 @@ export default {
     props: ['title'],
     data() {
         return {
-            questionPanel: 'questionPanel'
+
         }
     }
 }
